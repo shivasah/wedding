@@ -1,0 +1,147 @@
+CURRENT REVISION — V9, 12 NOVEMBER 2026
+
+The seal opening now has a brief gold glint, a rose-petal burst, and two
+cover leaves that unfold as the invitation copy appears. The 1.8-second
+sequence keeps the page locked until it is ready, supports replay, and
+is skipped for reduced motion or Escape. The floral artwork remains static.
+Petals use richer rose, vermilion and plum for contrast on the gold background.
+The artwork pause button and the extra celebration footnote are removed.
+Only Haldi retains colour swatches; Sangeet and wedding specify garments only.
+Ceremony effects still respect reduced motion, viewport and tab visibility.
+
+Cover flowers are static again. The former WebGL garden-motion script is
+retired and is not shipped. RSVP is for individuals, with no guest-count field
+or guest-count line in the message. Its floral background uses width-based
+tiles anchored to the top; attendance changes do not resize the pattern.
+
+Mobile ceremony cards use shorter copy, a smaller image and compact date/time
+layout. Dates, times, venue and dress information stay visible. Stacking is
+only enabled when all cards fit fully above the navigation. Otherwise the
+cards scroll normally. Sticky offsets are never negative. The mobile RSVP
+button occupies its navigation slot and has a small heart pulse; it never
+floats over the ceremony details. Reduced motion disables the pulse.
+
+The venue artwork is replaced by the original supplied photo, cleaned and
+enhanced with ImageGen. See VENUE-PHOTO.txt. Current source assets include
+assets/venue-photo.webp; the former venue gouache is archived outside delivery.
+
+The calendar remains after RSVP review, adapting to one or two days.
+
+HISTORICAL DESIGN RESEARCH AND ITERATION NOTES
+The following records earlier design stages and prompts; the current
+implementation above supersedes their old motion, guest-count and venue choices.
+
+DESIGN REFERENCES
+
+Original wedding invitation and event facts:
+https://shipri.vercel.app/
+
+Sabyasachi Heritage Bridal: rich Indian heritage, craftsmanship, restrained editorial typography.
+https://sabyasachi.com/pages/heritage-bridal
+
+Aaiyega: tactile invitation openings, multi-event schedules, RSVP usability.
+https://aaiyega.com/
+
+Wishlys: interactive opening and ceremony storytelling.
+https://wishlys.com/wedding-invitations
+
+These informed the design direction; no third-party layouts were copied.
+The venue illustration was recreated from the resort photograph supplied by the user.
+
+GENERATED ARTWORK
+Tool: built-in ImageGen (not CLI).
+Final website assets:
+assets/royal-garden.webp
+assets/royal-garden-mobile.webp
+assets/venue-gouache.webp
+
+Landscape prompt:
+Use case: illustration-story. Asset type: premium Indian wedding website hero background, landscape 3:2. Create an exquisite hand-painted Indian Pichwai botanical garden on deep midnight emerald green. Fine antique gold vines, richly detailed large pale blush lotus blossoms, sage lotus leaves, tiny warm ivory jasmine flowers, a pair of elegant peacocks low on opposite corners, dark forest background. Composition: ornate botanical illustrations concentrated on the far left and right sides and lower corners; the CENTRAL 55% must remain very dark uncluttered emerald negative space for cream wedding typography. At bottom a subtle lotus pond, at top a few delicate trailing sprigs. Elegant archival miniature painting, sophisticated rich pigments on subtly textured paper, fine delicate gold outlines, artful asymmetrical natural detail within overall balanced layout. No palace, no people, no text, no letters, no watermarks, no UI. Avoid busy center, bright green, photorealism, cartoon, shiny 3D. Luxurious, serene, romantic.
+
+Portrait companion prompt:
+Use case: illustration-story. Asset type: mobile wedding website background, portrait aspect ratio 2:3 (1024 x 1536 preferred). Create a portrait companion to the supplied landscape artwork, maintaining the same refined Pichwai miniature painting technique and midnight emerald, antique gold, sage and pale blush palette. Botanical border: delicate lotus flowers and jasmine on slender gold vines along the LEFT and RIGHT edges, occupying only the outer 15% each. At bottom corners a small pair of elegant peacocks and lotus pond. Top corners restrained thin floral sprigs. CENTER 65% wide and from 10% to 85% tall must be dark emerald negative space for typography. Sophisticated miniature painting on textured paper. No text, no lettering, no UI, no watermark. Give an exquisite tall mobile portrait composition with slim floral edges, not a cropped landscape.
+
+
+
+VISUAL REVISION
+The original emerald-and-gold cover remains unchanged.
+Inner pages use Bodoni Moda display type, Pinyon Script handwritten accents,
+and DM Sans for readable schedules and controls. The design combines layered
+stationery, subtle paper grain, marigold, midnight indigo, and sindoor red.
+Distinct paintings replace the repeated lotus placeholder on each event.
+The event stack remains fully visible in one continuous scroll.
+On desktop, image and information sit side by side; Sangeet reverses the
+composition. Below 800 pixels, every image sits above its event information.
+Touch controls remain at least 44 pixels high, and reduced motion is respected.
+Confirmed times supplied by the user: 25 January 10 AM Haldi, 25 January
+6 PM Sangeet, 26 January 7 PM Wedding (all 2027, India Standard Time).
+
+
+RSVP AND LIVING ARTWORK REVISION
+RSVP now follows the celebration stack; guest FAQs appear last. The form is
+an arched ivory stationery card set against the emerald Pichwai garden, with
+antique-gold rules, a lotus motif and handwritten salutation. The desktop
+composition pairs the card with a monogram invitation panel; mobile stacks
+the invitation and form. The preview dialog uses the same palette.
+
+A fixed gold RSVP button remains available above the form, including on mobile
+above the bottom navigation. It links directly to the form and hides when the
+form reaches the viewport, while the reply dialog is open, and on the opening
+screen. It reappears when guests scroll back above the form. The header and
+bottom navigation also retain their RSVP links.
+
+Haldi has drifting petals; Sangeet has warm lamp glows and gold motes;
+the wedding painting has a breathing fire glow and rising embers. The new
+resort gouache painting has lamp glows and pool ripples. Subtle image motion
+complements the effects. A shared animation loop is capped at 30 fps; canvas
+resolution is capped at 1.5 device pixels per CSS pixel. Only visible scenes
+render. Artwork can be paused, stops in hidden browser tabs, and respects
+system reduced-motion preferences, including changes while the site is open.
+
+The opening and cover retain their design; names and monograms now place
+Priyanka before Shiva throughout the invitation. Confirmed timings
+and the WhatsApp RSVP recipient are preserved. No RSVP has been sent.
+
+
+ANIMATED FLOWERS AND PHOTO STACK
+The original Pichwai paintings now move on both the seal-opening screen and
+the hero cover. A light WebGL displacement bends the floral vines and gives
+individual lotus blossoms a subtle breathing motion. Each side has its own
+phase; typography and invitation controls stay in their original DOM positions.
+The opening doors carry the animated painting with them. A discreet Pause
+flowers control shares its state with the existing artwork pause control.
+
+The garden caps rendering at 30 fps and pixel density at 1.5. Only visible
+scenes run. Reduced-motion preferences and hidden tabs stop rendering; failed
+GPU initialization leaves the original CSS image visible. Images are shared
+between scenes and selected to match the portrait/landscape CSS artwork.
+
+Ceremony cards now pin while the next one slides above them, settling with a
+slight alternating tilt, scale and soft shadow. On a tall mobile card, the
+sticky top offset is negative so its full contents scroll into view before it
+pins. The bottom navigation has a dedicated clearance. Card heights are
+remeasured after font loading and resizing. Keyboard focus on a covered card
+returns it to view. Reduced motion restores a regular vertical list.
+
+Validation includes DOM interaction checks, mocked rendering lifecycle checks,
+and phone/desktop card-position calculations. Browser rendering remains
+unverified because preview browser launch is blocked in this environment.
+
+
+CALENDAR AFTER RSVP
+The ceremony cards and countdown no longer have calendar buttons. The RSVP
+review dialog offers a single calendar keepsake after the reply actions, only
+for guests who select attending. The date and button label reflect their
+reviewed selections, and declining hides and disables the option.
+
+Haldi and/or Sangeet reserve 25 January 2027. Wedding reserves 26 January.
+Choosing celebrations across both dates reserves 25–26 January. One calendar
+file contains a single all-day event, with the selected ceremony times and
+venue in its notes. It uses the reviewed RSVP snapshot; reviewing an edited
+reply updates the reservation. The website does not claim the RSVP was sent
+or the calendar import completed.
+
+All-day end dates are exclusive, following RFC 5545 section 3.6.1:
+https://www.rfc-editor.org/rfc/rfc5545#section-3.6.1
+Seven event-selection combinations, downloads, date ranges, line folding,
+snapshot behavior and declined/invalid replies passed DOM and logic checks.
