@@ -1,0 +1,16 @@
+WEDDING MUSIC — USER-SUPPLIED AUDIO
+Revision 12 · 19 November 2026
+
+File: assets/solitudes-embrace.mp3
+Source: solitudes-embrace.mp3 supplied by the user.
+Duration: 2 minutes 8.157 seconds. Stereo MP3, 44.1 kHz.
+The supplied file is copied without trimming or re-encoding.
+
+The welcome cover is silent until the guest clicks or taps the P&S seal.
+The seal starts the track at 0:00. The existing loop repeats the full track.
+Music controls pause and resume from the current position. Muting remains
+in effect across navigation and unrelated interactions. Background tabs
+pause music and resume only when playback was previously started and the
+guest has not muted it. Opening the seal again restarts an enabled track.
+
+This replaces the original synthesized loop and the pending Blossoms request.

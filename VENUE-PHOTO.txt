@@ -1,0 +1,13 @@
+VENUE PHOTOGRAPH
+
+Website asset: assets/venue-photo.webp (1536 x 1024)
+Full-resolution PNG: ../Venue-Photo.png
+Source: the original resort photograph supplied by the user.
+Tool: built-in ImageGen, image edit mode.
+
+AI-assisted watermark cleanup and clarity enhancement of the supplied
+photograph. This replaces the earlier illustrated venue artwork. The image
+is displayed in its landscape proportions, with no animated pool overlay.
+
+Final edit prompt:
+Use case: precise-object-edit. Asset type: retouched real venue photograph for a wedding invitation website. Input image is the exact photograph to edit, NOT a style reference. Remove only the pale text watermark in the lower-right corner, reconstructing the water and pool edge beneath it naturally. Preserve the photograph's original composition, camera viewpoint, actual curved swimming pool, blue mushroom fountain with yellow dots, smaller round pool at left, red roofs and buildings, stone paving, trees, hills and blue evening sky. Keep all architecture, landscape shapes and positions identical. Retain a natural realistic photograph, not a painting, not an illustration, not a CGI render. Mild careful denoising and a modest clarity improvement are allowed; preserve realistic photo texture and original lighting and colours. Do not add features, new buildings, extra fountains, decoration, people, flowers or text. Landscape 3:2 at higher resolution, preferably 1536x1024. No watermark or logo, no added borders.
