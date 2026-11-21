@@ -436,3 +436,7 @@ body.entry-active .floating-rsvp{display:none}.motion-icon{font-size:13px;width:
 .editorial .diya-button>svg{flex-shrink:0}
 .editorial .diya-prompt{width:100%}
 .editorial .diya-button:hover>svg{transform:none}
+
+/* One rounded outline style for venue and attire on every ceremony card. */
+.ceremony .ceremony-icon{width:24px;height:24px;flex:0 0 24px;margin-top:1px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;color:var(--card-accent)}
+.ceremony .ceremony-place,.ceremony .ceremony-dress{gap:12px;align-items:flex-start}

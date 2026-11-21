@@ -1,5 +1,5 @@
 PRIYANKA & SHIVA — A CELEBRATION OF FOREVER
-Revision 13 · 19 November 2026
+Revision 14 · 22 November 2026
 
 A mobile-first wedding invitation in HTML, CSS and JavaScript.
 No framework, install step, paid API, or backend is required.
@@ -29,6 +29,7 @@ Repeated tiny captions were removed. The countdown has a proper space
 between “our” and “wedding” even when the line break disappears.
 
 Mobile ceremony illustrations are 180–210px tall. Cards have SVG kurta icons
+with matching rounded outline location icons,
 and playful, clear outfit notes: every shade of yellow for Haldi; Indo-Western
 for Sangeet; Indian festive wear for the wedding. There are no colour swatches.
 Cards overlap only if all their content fits above the bottom navigation.

@@ -1,4 +1,12 @@
-CURRENT REVISION — V13, 19 NOVEMBER 2026
+CURRENT REVISION — V14, 22 NOVEMBER 2026
+
+The location pin and kurta on every ceremony card now share one outline style:
+24px square, 1.5px strokes, rounded ends and corners, and the card accent colour.
+Both rows use the same icon/text spacing. Reused SVG symbols keep all three
+cards consistent. The stylesheet URL is versioned so existing previews receive
+the updated icons instead of a cached stylesheet.
+
+PREVIOUS REVISION — V13, 19 NOVEMBER 2026
 
 The lamp prompt and blessing caption reserve their longest natural wrapped
 height before activation. Hidden, non-accessible copies share the same grid
